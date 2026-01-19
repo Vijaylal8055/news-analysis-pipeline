@@ -1140,9 +1140,9 @@ async def check_all_apis():
 - **pytest-asyncio** (0.21.1) - Async test support
 
 ### APIs
-NewsAPI - News article aggregation
-Google Gemini - LLM #1 for analysis
-OpenRouter - LLM #2 access (Mistral)
+*NewsAPI - News article aggregation
+*Google Gemini - LLM #1 for analysis
+*OpenRouter - LLM #2 access (Mistral)
 
 AI Assistant
 
@@ -1194,7 +1194,14 @@ grep "ERROR" app.log
 grep "429" app.log | wc -l
 
 Appendix C: File Sizes & Complexity
-FileLinesComplexityPurposemain.py180MediumPipeline orchestrationllm_analyzer.py200HighGemini integration, JSON parsingllm_validator.py180MediumOpenRouter integrationnews_fetcher.py120LowNewsAPI integrationtests/test_analyzer.py120MediumUnit testscheck_gemini_models.py40LowDiagnostic utilityview_results.py60LowResults viewer
+File                              Lines        Complexity      Purpose
+main.py                           180          Medium          Pipeline orchestration
+llm_analyzer.py                   200          High            Gemini integration, JSON parsing
+llm_validator.py                  180          Medium          OpenRouter integration
+news_fetcher.py                   120          Low             NewsAPI integration
+tests/test_analyzer.py            120          Medium          Unit tests
+check_gemini_models.py            40           Low             Diagnostic utility
+view_results.py                   60           Low             Results viewer
 Total: ~900 lines of production code
 
 Appendix D: Lessons Learned Checklist
@@ -1247,3 +1254,4 @@ Project Status: ✅ Successfully Completed
 Total Time Invested: ~3 hours of development + 2 hours of documentation
 Lines Written: ~900 code + ~20,000 documentation
 Most Valuable Lesson: Don't guess. Gather data.</parameter>
+
